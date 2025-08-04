@@ -1,0 +1,22 @@
+.answers{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: .5rem;
+    justify-content: center;
+}
+.question{
+    text-align: center;
+    font-weight: 700;
+}
+.questionComponent{
+    position:absolute;
+    top: 30%;
+    width: 100vw;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}

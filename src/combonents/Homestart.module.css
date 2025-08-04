@@ -1,0 +1,11 @@
+.homeStart {
+  position:absolute;
+    top: 30%;
+    width: 100vw;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;         /* Some spacing around content */
+   /* Optional: soft background color */
+}
