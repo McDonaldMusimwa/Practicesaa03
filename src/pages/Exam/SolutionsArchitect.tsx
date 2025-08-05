@@ -1,4 +1,5 @@
 import HomeStart from '../../combonents/HomeStart';
+import Home from '../Home';
 import styles from "./Exam.module.css"
 import { useState } from 'react';
 function SolutionsArchitect() {
@@ -20,7 +21,7 @@ const [start, setStart] = useState(false)
 
     return (
         <div className={styles.base}>
-               <HomeStart startQuestionaire={startQuestionaireHandler} /> 
+             {start?<Home /> :  <HomeStart exam="SolutionsArchitect" startQuestionaire={startQuestionaireHandler} /> }
    
         </div>
     );

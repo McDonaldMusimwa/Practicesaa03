@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Exam.module.css"
 import HomeStart from "../../combonents/HomeStart";
+import Home from "../Home";
 function Practitioner() {
 
     const [start, setStart] = useState(false)
@@ -18,7 +19,7 @@ function Practitioner() {
   };
     return (
         <div  className={styles.base}>
-    <HomeStart startQuestionaire={startQuestionaireHandler} />
+    {start?<Home /> :  <HomeStart exam="Practitioner" startQuestionaire={startQuestionaireHandler} />}
    
    
         </div>

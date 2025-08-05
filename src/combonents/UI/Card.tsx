@@ -1,6 +1,6 @@
-//import styles from "./Card.module.css";
+import styles from "./Card.module.css";
 function Card({ children }: { children: React.ReactNode }) {
-    return <div className="card">{children}</div>;
+    return <div className={styles.card}>{children}</div>;
   }
   
   export default Card;

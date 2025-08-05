@@ -64,12 +64,12 @@ console.log(result)
         ))}
       </form>
       {answer ?
-      <div>
+      <div className={styles.reviewsection}>
      
         <Card>{result}</Card>
         <Card>{question.explantion}</Card>
       </div> :null}
-     {answer ? <button onClick={navigateHandler.nextQuestion}>Next</button> : <button onClick={saveAnswerCompare}>Save</button>}
+     {answer ? <button className={styles.buttin} onClick={navigateHandler.nextQuestion}>Next</button> : <button className={styles.button} onClick={saveAnswerCompare}>Save</button>}
     </div>
   );
 }

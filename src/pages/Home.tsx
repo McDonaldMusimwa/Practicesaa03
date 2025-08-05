@@ -1,7 +1,7 @@
 import QuestionComponent from "../combonents/Question";
 import { useState ,useEffect} from "react";
 function Home(){
-  const [seconds, setSeconds] = useState(0);
+  //const [seconds, setSeconds] = useState(0);
 const saaQuestions = [
   {
     question: "A company has developed public APIs hosted in Amazon EC2 instances behind an Elastic Load Balancer. The APIs will be used by clients from on-premises networks that require whitelisting IP addresses. What should the Solutions Architect do to meet this requirement?",
