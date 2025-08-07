@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# AWS Practice Questions Web App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+(Proof of concept) 
 
-Currently, two official plugins are available:
+This project is a serverless web application designed to help users prepare for the students for the follwing exams.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1: **AWS Certified Solutions Architect – Associate (SAA-C03)** 
 
-## Expanding the ESLint configuration
+2: **AWS Cloud Practioner** 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3: **AWS Ai Practioner** 
+ It presents multiple-choice questions, with other features such as stores user progress, and offers feedback in progress.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧠 Purpose
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+To give aspiring AWS-certified professionals a hands-on way to test and improve their knowledge with dynamic practice questions that simulate real exam scenarios.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ✅ View randomized AWS practice questions
+- ✅ Select and submit answers
+- ✅ See correct/incorrect feedback
+- ✅ Backend API built with AWS Lambda
+- ✅ Data stored in DynamoDB
+- ✅ Deployed using AWS services (API Gateway, Lambda, DynamoDB, S3)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🏗️ Architecture Overview
+
+    React (Frontend)  
+    |
+    |--> API Gateway (REST API)
+    |
+    |--> AWS Lambda (Node.js)
+    |
+    |--> DynamoDB (Questions Table)
+
+    
+---
+
+## 🧰 Tech Stack
+
+| Layer     | Technology           |
+|----------|----------------------|
+| Frontend | React (Vite or CRA)  |
+| Backend  | Node.js (AWS Lambda) |
+| API      | AWS API Gateway      |
+| DB       | Amazon DynamoDB      |
+| Infra    | AWS IAM, CloudWatch, S3 |
+
+---
+
+## 🗃️ DynamoDB Table Structure
+
+**Table Name:** `PracticeQuestions`
+
+| Attribute     | Type    | Description                          |
+|---------------|---------|--------------------------------------|
+| `examcode`    | String  | Partition key (e.g., `SAA-C03`)      |
+| `questionId`  | String  | Sort key (unique for each question) |
+| `question`    | String  | The question text                    |
+| `options`     | List    | Multiple choice options              |
+| `answer`      | String  | Correct answer option (e.g., `B`)   |
+| `explanation` | String  | Explanation for the correct answer  |
+
+---
+
+📈 Future Enhancements
+
+📝 User progress tracking (with Cognito)
+
+🧪 Timed practice exams
+
+🌍 Internationalization support
+
+📊 Score calculation

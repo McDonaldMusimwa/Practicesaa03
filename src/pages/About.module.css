@@ -1,24 +1,102 @@
-.aboutContainer {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: linear-gradient(to right, #f8fbff, #e6f7ff);
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #213547;
-  line-height: 1.8;
+.container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #1a202c;
 }
 
-.title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #0d47a1;
+.header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
-.paragraph {
-  font-size: 1.1rem;
+.header h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: justify;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #89f336;
+  padding-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #2b6cb0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #88f33686;
+  border-radius: .2rem;
+}
+
+.cta h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+.ctaButton {
+  background-color: #89f336;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: .2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #dd6b20;
+}
+
+.highlight {
+  color: #f6ad55;
 }

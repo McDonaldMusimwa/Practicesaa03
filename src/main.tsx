@@ -7,6 +7,8 @@ import Practitioner from './pages/Exam/Practioner.tsx';
 import About from './pages/About.tsx';
 import { BrowserRouter, Route, Routes } from "react-router";
 import Header from './combonents/Header.tsx';
+import Footer from './combonents/Footer.tsx';
+import AiPractitioner from './pages/Exam/Aipractioner.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -16,8 +18,10 @@ createRoot(document.getElementById('root')!).render(
       <Route index path='/' element={<App />} />
       <Route path='saa03' element={<SolutionsArchitect />} /> 
       <Route path='practioner' element={<Practitioner />} /> 
+      <Route path='aipractioner' element={<AiPractitioner />} />
       <Route path='about' element={<About />} />
 
     </Routes>
+    <Footer />
   </BrowserRouter>
 )

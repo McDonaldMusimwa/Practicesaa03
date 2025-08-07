@@ -18,6 +18,11 @@ margin: 0;
 .logo.react:hover {
   cursor: pointer;
 }
+.hero{
+  
+  height: 10vh;
+  
+}
 .homehero {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -27,12 +32,12 @@ margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #213547;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;      /* Centers horizontally */
   align-items: center;          /* Centers vertically */
-  
+  top: 1rem;
   gap: 2rem;
   height: 100vh;                /* Full height to center vertically */
   text-align: center;

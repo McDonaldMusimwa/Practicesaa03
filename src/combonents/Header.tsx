@@ -7,7 +7,7 @@ function Header() {
       <div className={styles.logocontainer}>
         <img src={logo} alt="logo" className="logo" />
         <NavLink to={"/"}>
-          <h2>Practice Saa</h2>
+          <h2>Practice Solution</h2>
         </NavLink>
       </div>
 
